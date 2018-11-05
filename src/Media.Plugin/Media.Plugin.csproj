@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid71;Xamarin.iOS10</TargetFrameworks>
+		<TargetFrameworks>MonoAndroid71;Xamarin.iOS10</TargetFrameworks>
 		<AssemblyName>Plugin.Media</AssemblyName>
 		<RootNamespace>Plugin.Media</RootNamespace>
 		<Product>$(AssemblyName) ($(TargetFramework))</Product>
