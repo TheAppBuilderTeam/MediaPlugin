@@ -512,8 +512,7 @@ namespace Plugin.Media
             int id = GetRequestId();
 
             var ntcs = new TaskCompletionSource<MediaFile>(id);
-            if (Interlocked.CompareExchange(ref completionSource, ntcs, null) != null)
-                throw new InvalidOperationException("Only one operation can be active at a time");
+			Interlocked.CompareExchange(ref completionSource, ntcs, null);
 
 			context.StartActivity(CreateMediaIntent(id, type, action, options));
 
